@@ -1,0 +1,28 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+nav {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 69px;
+    padding: 0 10px 0 10px;
+}
+.homelogo {
+    float: left;
+    height: 50px;
+}
+nav img {
+    justify-content: flex-start;
+}
+nav .navlink {
+    float: right;
+    color: grey;
+    text-decoration: underline;
+    padding: 15px;
+}
