@@ -1,17 +1,29 @@
+/*
+TODO:
+- JavaScript interaction
+- Mobile view
+- More documentation
+- readme.md
+- Project webpages
+- Links to project webpages
+- internal links /done/
+*/
+
 body {
     font-family: Helvetica, sans-serif;
     font-size: 22px;
-    color: seashell;
-    background-color: black;
+    color: black;
+    background-color: white;
     opacity: 0.9;
     text-align: center;
+    margin: 0px;
 }
 nav {
-    position: fixed;
+   /* position: fixed; removed to make it look better when internal links */
     background-color: black;
     width: 100%;
-    height: 69px;
-    padding: 0 10px 0 10px;
+    height: 60px;
+    padding: 0px 10px 0px 10px;
 }
 .homelogo {
     float: left;
@@ -23,6 +35,86 @@ nav img {
 nav .navlink {
     float: right;
     color: grey;
-    text-decoration: underline;
+    text-decoration: none;
     padding: 15px;
 }
+nav .navlink:hover {
+    color: lightblue;
+}
+header {
+    /* padding-top: 60px; removed since not fixed navbar */
+    color: black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+/* Use of flex-box in main */
+.picture_right, .picture_left {
+    display: flex;
+    justify-content: space-between;
+}
+/* makes the picture placed to the right */ 
+.picture_right .project_text {order: 1; width: 45%;}
+.picture_right img {order: 2; width: 45%; border: 2px solid black; padding: 10px}
+
+/* makes the picture placed to the left */
+.picture_left .project_text {order: 2; width: 45%;} 
+.picture_left img {order: 1; width: 45%; border: 2px solid black; padding: 10px}
+
+/* Uses grid in footer */
+footer {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    column-gap: 1em;
+}
+
+footer img, footer h3, footer div {
+    border: 2px solid black;
+}
+#footerlogo {
+    justify-self: center;
+}
+.share-container{
+    width: 300px;
+    height: 75px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+  }
+  #social-media{
+    width: 300px;
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+  }
+  .social-button{
+    display: contents;
+    border: none;
+    background: transparent;
+    padding: 0px;
+    margin: 15px 14px;
+  }
+  #share-button{
+    width: 300px;
+    height: 75px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    font-size: 24px;
+    background-color: lightblue;
+    letter-spacing: 1px;
+    color: #141c3a;
+    border-radius: 30px;
+    position: relative;
+    top: -75px;
+    font-family: 'Nunito', sans-serif;
+  }
