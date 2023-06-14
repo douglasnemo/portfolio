@@ -1,13 +1,7 @@
 /*
 TODO:
-- JavaScript interaction /done/
-- Mobile view /almost/
-- More documentation /working/
-- readme.md /done/
-- Project webpages /when there are any/
-- Links to project webpages /to be continued/
-- internal links /done/
 - Hamburger menu for mobile view
+- Links to social media accounts
 */
 
 body {
@@ -52,11 +46,12 @@ nav .navlink:hover {
 @media only screen and (max-width: 480px){
     .menu {
         float: right;
+        cursor: pointer;
     }
     nav .navlink {
         display: none;
     }
-    svg {
+    .ham {
         cursor: pointer;
     }
 }
