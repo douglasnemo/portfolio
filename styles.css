@@ -1,12 +1,13 @@
 /*
 TODO:
-- JavaScript interaction
-- Mobile view
-- More documentation
-- readme.md
-- Project webpages
-- Links to project webpages
+- JavaScript interaction /done/
+- Mobile view /almost/
+- More documentation /working/
+- readme.md /done/
+- Project webpages /when there are any/
+- Links to project webpages /to be continued/
 - internal links /done/
+- Hamburger menu for mobile view
 */
 
 body {
@@ -43,7 +44,7 @@ nav .navlink:hover {
 }
 /* hamburger menu not visible in desktop view */
 @media only screen and (min-width: 481px){
-    svg {
+    .ham {
         display: none;
     }
 }
@@ -57,9 +58,6 @@ nav .navlink:hover {
     }
     svg {
         cursor: pointer;
-    }
-    svg:hover .top, svg:hover .middle, svg:hover .bottom {
-        fill: lightblue;
     }
 }
 
