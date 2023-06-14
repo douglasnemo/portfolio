@@ -41,6 +41,64 @@ nav .navlink {
 nav .navlink:hover {
     color: lightblue;
 }
+/* hamburger menu not visible in desktop view */
+@media only screen and (min-width: 481px){
+    svg {
+        display: none;
+    }
+}
+/* hamburger menu for mobile version */
+@media only screen and (max-width: 480px){
+    .menu {
+        float: right;
+    }
+    nav .navlink {
+        display: none;
+    }
+    svg {
+        cursor: pointer;
+    }
+    svg:hover .top, svg:hover .middle, svg:hover .bottom {
+        fill: lightblue;
+    }
+}
+
+/* hamburger menu for the second version
+@media only screen and (max-width: 480px) {
+.menu{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+   }
+  svg {
+    cursor: pointer;
+    rect {
+      transition: all .3s ease-in-out;
+    }
+    &:hover{
+      .middle {
+        x: 0;
+        opacity: 0;
+      }
+      .top {
+        transform: rotate(45deg);
+        transform-origin: center top;
+        x: 50px;
+        y: 35px;
+      }
+      .bottom {
+        transform: rotate(-45deg);
+        transform-origin: center top;
+        x: -20px;
+        y: 25px;
+      }
+    }
+  }
+}
+*/
+  
+  
 header {
     /* padding-top: 60px; removed since not fixed navbar */
     color: black;
@@ -56,13 +114,23 @@ header {
     display: flex;
     justify-content: space-between;
 }
-/* makes the picture placed to the right */ 
+/* places the picture to the right */ 
 .picture_right .project_text {order: 1; width: 45%;}
 .picture_right img {order: 2; width: 45%; border: 2px solid black; padding: 10px}
 
-/* makes the picture placed to the left */
+/* places the picture to the left */
 .picture_left .project_text {order: 2; width: 45%;} 
 .picture_left img {order: 1; width: 45%; border: 2px solid black; padding: 10px}
+
+/* settings in main for mobile */
+@media only screen and (max-width: 480px) {
+    .picture_right, .picture_left {
+      display: flex;
+      flex-flow: column wrap;
+        }
+    .picture_right .project_text, .picture_left .project_text {order: 1; width: 100%;}
+    .picture_right img, .picture_left img {order: 2; width: 100%;}
+    }
 
 /* Uses grid in footer */
 footer {
@@ -70,13 +138,19 @@ footer {
     grid-template-columns: 50% 25% 25%;
     column-gap: 1em;
 }
-
 footer img, footer h3, footer div {
     border: 2px solid black;
 }
 #footerlogo {
     justify-self: center;
 }
+/* settings in footer for mobile */
+@media only screen and (max-width: 480px) {
+    footer {
+      display: inline-block;
+    }
+}
+
 .share-container{
     width: 300px;
     height: 75px;
